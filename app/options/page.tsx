@@ -1,13 +1,16 @@
 import DocTitle from "@/components/titles/DocTitle";
 import Code from "@/components/ui/code";
-import P from "@/components/page/Paragraph";
+import P from "@/components/ui/Paragraph";
 import HlCode from "@/components/ui/HlCode";
 import SubTitle from "@/components/titles/SubTitle";
 import ThirdTitle from "@/components/titles/thirdTitle";
 
+import Container from "@/components/page/Container";
+import Link from "next/link";
+
 export default function Options() {
   return (
-    <main className="flex flex-col justify-start items-start min-h-[650px] h-[100%] w-full gap-4 pl-5 p-menu-top">
+    <Container>
       <DocTitle>Options</DocTitle>
       <P>
         To customize the options of <Code>better-number-input</Code>, you need
@@ -71,6 +74,8 @@ const changedOptions = {
 input.betterInputOptions = changedOptions;
 `}
       </HlCode>
-    </main>
+
+      <P className="mt-16">Check out <Link href="/docs/properties" className="text-link">the properties page</Link> to know more in detail about the options and the input behaviour.</P>
+    </Container>
   );
 }

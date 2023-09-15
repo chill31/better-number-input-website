@@ -2,14 +2,16 @@
 
 import Code from "@/components/ui/code";
 import DocTitle from "@/components/titles/DocTitle";
-import P from "@/components/page/Paragraph";
+import P from "@/components/ui/Paragraph";
 
 import Link from "next/link";
 import SubTitle from "@/components/titles/SubTitle";
 
+import Container from "@/components/page/Container";
+
 export default function Docs() {
   return (
-    <main className="flex flex-col justify-start items-start min-h-[650px] h-[100%] w-full gap-4 pl-5 p-menu-top">
+    <Container>
       <DocTitle className="max-md:text-[2.7rem]">Documentation</DocTitle>
       <p className="text-lg mt-5">
         If you haven&apos;t already, install the library by following the
@@ -61,6 +63,6 @@ export default function Docs() {
           the options page
         </Link>
       </p>
-    </main>
+    </Container>
   );
 }

@@ -1,12 +1,14 @@
 import HlCode from "@/components/ui/HlCode";
 import DocTitle from "@/components/titles/DocTitle";
-import P from "@/components/page/Paragraph";
+import P from "@/components/ui/Paragraph";
 import ButtonLink from "@/components/ui/ButtonLink";
 import Code from "@/components/ui/code";
 
+import Container from "@/components/page/Container";
+
 export default function Installation() {
   return (
-    <main className="flex flex-col justify-start items-start min-h-[650px] h-[100%] w-full gap-4 pl-5 p-menu-top">
+    <Container>
       <DocTitle>Installation</DocTitle>
       <P>
         To use <Code>better-number-input</Code> in your HTML5 website (no
@@ -26,6 +28,6 @@ export default function Installation() {
       <ButtonLink href="/docs" linkStyles="mt-12">
         Go to Documentation
       </ButtonLink>
-    </main>
+    </Container>
   );
 }

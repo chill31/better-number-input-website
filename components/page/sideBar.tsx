@@ -1,12 +1,13 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
-import { BsList, BsXLg } from "react-icons/bs";
+import { BsList, BsXLg, BsChevronRight, BsChevronDown } from "react-icons/bs";
+// import { AiOutlineArrowDown } from "react-icons/ai";
 import SideBarLink from "@/components/page/sideBarLink";
 
 export default function SideBar() {
   const [open, setOpen] = useState(false);
+  const [propertiesVisible, setPropertiesVisible] = useState(false);
 
   function handleWhiteSpaceClick(event: any) {
     const target = event.target as HTMLElement;
@@ -64,6 +65,60 @@ export default function SideBar() {
             href="/options"
             sideBarOpenState={open}
             content={"Options"}
+          />
+          <span className="flex justify-start items-center gap-2">
+            <SideBarLink
+              href="/docs/properties"
+              sideBarOpenState={open}
+              content={"Properties"}
+            />
+            <BsChevronRight
+              className={`${propertiesVisible ? "rotate-90" : ""} h-6 w-6 cursor-pointer`}
+              onClick={() => setPropertiesVisible((prev) => !prev)}
+            />
+          </span>
+
+          <div
+            className={`flex flex-col gap-2 ${
+              propertiesVisible ? "" : "hidden"
+            }`}
+          >
+            <SideBarLink
+              className="ml-5"
+              href="/docs/properties/allowNegative"
+              sideBarOpenState={open}
+              content={"allowNegative"}
+            />
+            <SideBarLink
+              className="ml-5"
+              href="/docs/properties/allowDecimal"
+              sideBarOpenState={open}
+              content={"allowDecimal"}
+            />
+            <SideBarLink
+              className="ml-5"
+              href="/docs/properties/allowScientificNotation"
+              sideBarOpenState={open}
+              content={"allowScientific..."}
+            />
+            <SideBarLink
+              className="ml-5"
+              href="/docs/properties/valueAsNumber"
+              sideBarOpenState={open}
+              content={"valueAsNumber"}
+            />
+            <SideBarLink
+              className="ml-5"
+              href="/docs/properties/resetValues"
+              sideBarOpenState={open}
+              content={"resetValues"}
+            />
+          </div>
+
+          <SideBarLink
+            href="/extra"
+            sideBarOpenState={open}
+            content={"Extra"}
           />
         </div>
       </div>
