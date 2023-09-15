@@ -25,7 +25,13 @@ button {
 }
 
 p {
-  @apply text-lg mr-5 max-md:mr-0 max-md: !max-w-[calc(100vw-3rem)];
+  @apply text-lg mr-5 !max-w-[calc(100vw-3rem)];
+}
+
+@media (max-width: 768px) {
+  p {
+    margin-right: 0 !important;
+  }
 }
 
 .main-title {
