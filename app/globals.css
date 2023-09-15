@@ -2,26 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  @apply m-0 p-0 box-border
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply bg-[#09090b] text-white overflow-x-hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @apply font-semibold !text-left;
+}
+
+div,
+span,
+p,
+button {
+  @apply font-normal
+}
+
+p {
+  @apply text-lg mr-5 max-md:mr-0 max-md: !max-w-[calc(100vw-3rem)];
+}
+
+.main-title {
+  @apply text-center;
+}
+
+h1 {
+  @apply text-[3rem];
+}
+
+h2 {
+  @apply text-[2.4rem];
+}
+
+h3 {
+  @apply text-[1.9rem]
+}
+
+h4 {
+  @apply text-[1.5rem]
+}
+
+/** HLJS styles **/
+
+.hljs-variable {
+  @apply !text-red-400;
+}
+
+.hljs-keyword {
+  @apply !text-purple-400;
+}
+
+.hljs-string {
+  @apply !text-green-600;
+}
+
+.hljs-title {
+  @apply !text-cyan-400;
+}
+
+.hljs-name {
+  @apply !text-red-400;
+}
+
+.hljs-attr {
+  @apply !text-red-400;
+}
+
+.hljs-literal,
+.hljs-number {
+  @apply !text-yellow-400;
+}
+
+.hljs-literal {
+  @apply italic
+}
+
+.hljs-property {
+  @apply !text-blue-400
 }
