@@ -24,8 +24,28 @@ button {
   @apply font-normal
 }
 
+.main-title {
+  @apply text-center;
+}
+
+h1 {
+  @apply text-[3rem] max-[768px]:!text-[2.4rem];
+}
+
+h2 {
+  @apply text-[2.4rem] max-[768px]:!text-[1.9rem];
+}
+
+h3 {
+  @apply text-[1.9rem] max-[768px]:!text-[1.5rem]
+}
+
+h4 {
+  @apply text-[1.5rem] max-[768px]:!text-[1.1rem]
+}
+
 p {
-  @apply text-lg mr-5 !max-w-[calc(100vw-3rem)];
+  @apply text-lg mr-5 !max-w-[calc(100vw-3rem)] max-[768px]:mr-0 max-[768px]:w-[100vw] max-[768px]:!text-[.9rem];
 }
 
 @media (max-width: 768px) {
@@ -34,24 +54,8 @@ p {
   }
 }
 
-.main-title {
-  @apply text-center;
-}
-
-h1 {
-  @apply text-[3rem];
-}
-
-h2 {
-  @apply text-[2.4rem];
-}
-
-h3 {
-  @apply text-[1.9rem]
-}
-
-h4 {
-  @apply text-[1.5rem]
+code {
+  @apply max-[768px]:!text-[.9rem]
 }
 
 /** HLJS styles **/

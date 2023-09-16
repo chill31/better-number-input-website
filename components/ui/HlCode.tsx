@@ -38,7 +38,7 @@ export default function HlCode({
           lang === "js" ? "js" : "xml"
         } !bg-zinc-900 !text-gray-300 rounded-md ${
           multiline ? "whitespace-pre-wrap" : "whitespace-nowrap"
-        } w-[40rem] max-w-[95%] ${className}`}
+        } w-[40rem] max-w-[calc(100vw-3rem)] ${className}`}
       >
         {children}
       </code>
